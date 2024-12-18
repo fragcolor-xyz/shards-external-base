@@ -96,8 +96,9 @@ make
 To use your shard in a Shards project:
 
 1. Build the shared library
-2. Place the library in your Shards project's lib directory
-3. Import and use your operations in Shards code
+2. Create an `externals` folder in the same directory as your Shards script
+3. Place the built library in the `externals` folder
+4. The Shards runtime will automatically load the external shard
 
 Example usage in Shards:
 
@@ -106,4 +107,12 @@ Example usage in Shards:
 Calculator.Add(5)    # Add 5 to accumulator
 Calculator.Memory("store")    # Store current value
 Calculator.Memory("recall")   # Recall stored value
+```
+
+Project structure example:
+```
+your_project/
+├── your_script.shs     # Your Shards script
+└── externals/            # External shards folder
+    └── calculator        # The built library
 ``` 
