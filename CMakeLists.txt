@@ -10,6 +10,10 @@ set(
   ${CMAKE_CURRENT_LIST_DIR}/calculator.cpp
 )
 
+if(NOT EXISTS "${SHARDS_DIR}/include/shards/shards.hpp")
+  message(FATAL_ERROR "SHARDS_DIR is not set correctly, please set it to the shards root directory")
+endif()
+
 # Header paths for your shard
 set(
   MY_PROJECT_HEADER_PATHS
