@@ -11,7 +11,7 @@ set(
 )
 
 if(NOT EXISTS "${SHARDS_DIR}/include/shards/shards.hpp")
-  message(FATAL_ERROR "SHARDS_DIR is not set correctly, please set it to the shards root directory")
+  message(FATAL_ERROR "SHARDS_DIR(${SHARDS_DIR}) is not set correctly, please set it to the shards root directory")
 endif()
 
 # Header paths for your shard
